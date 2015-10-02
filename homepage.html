@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+ 	<!-- Bootstrap links -->
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Bootstrap links -->
+       <title>
+       <?php echo 'Title'; ?>
+       </title>
+ </head>
+
+
+ <body style="background:black">
+ <!-- Navigation Bar and login page (modal) Nesreen-->
+ <div style="backgroud-color: black; width:100%; margin:0" >
+ <nav class="navbar navbar-inverse" >
+	  <div class="container-fluid" >
+	    <div class="navbar-header" style="margin-right:75%;">
+	      <a class="navbar-brand" href="#">Eshop</a>
+	    </div>
+	    
+	    <div >
+	      <ul class="nav navbar-nav">
+	        
+	        <li class="dropdown">
+	          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop 
+	          	<span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Women</a></li>
+	            <li><a href="#">Men </a></li>
+	            <li><a href="#">Kids</a></li> 
+	            <li><a href="#">Electronics</a></li> 
+	          </ul>
+	        </li>
+	        <li><a href="#">Cart</a></li> 
+	       <li><a href="#" data-toggle="modal" data-target="#myModal">User</a></li>
+	      </ul>
+	     
+</nav>
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+            </ul>
+        </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        <p></p><br> Please contact <a mailto:href="JoeSixPack@Sixpacksrus.com"></a>JoeSixPack@Sixpacksrus.com</a> for any other inquiries.</p>
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Alias:</label>
+              <div class="controls">
+                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="passwordinput">Password:</label>
+              <div class="controls">
+                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+              <label class="control-label" for="rememberme"></label>
+              <div class="controls">
+                <label class="checkbox inline" for="rememberme-0">
+                  <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Alias:</label>
+              <div class="controls">
+                <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+              <div class="controls">
+                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Multiple Radios (inline) -->
+            <br>
+            <div class="control-group">
+              <label class="control-label" for="humancheck">Humanity Check:</label>
+              <div class="controls">
+                <label class="radio inline" for="humancheck-0">
+                  <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+                <label class="radio inline" for="humancheck-1">
+                  <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+              </div>
+            </div>
+            </fieldset>
+            </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- Navigation Bar and login page (modal) Nesreen-->
+
+<!-- Sliding Images -->
+
+<div class="container" style="width:100%; margin:0" >
+      <div class="carousel slide" data-ride="carousel" id="carousel-ex" style="width:100%; ">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-ex" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-ex" data-slide-to="1"></li>
+          <li data-target="#carousel-ex" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" style="width:100%; ">
+          <div class="item active" style="width:100%; ">
+            <img src="hp1.png" alt="image">
+            <div class="carousel-caption">
+              <h2 style="color:">Check out our women collection</h2>
+            </div>
+          </div>
+          <div class="item">
+            <img src="laptop.png" alt="image">
+            <div class="carousel-caption">
+              <h2>This is the heading</h2>
+              <p>This is the paragraph</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="shoes.png" alt="image">
+            <div class="carousel-caption">
+              <h2>This is the heading</h2>
+              <p>This is the paragraph</p>
+            </div>
+          </div>
+          <a href="#carousel-ex" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a href="#carousel-ex" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+<!-- Sliding Images -->
+<!-- Latest compiled and minified JavaScript -->
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+ </body>
+</html> 
