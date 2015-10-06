@@ -18,7 +18,7 @@
         </div>
           <div class="panel-body">
         <?php 
-        $currentUser = "nesreeen";//ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+        $currentUser = SESSION['user'];
             $conn = new mysqli("localhost", "root", "", "EshopDB");
             // Check connection
             if ($conn->connect_error) {

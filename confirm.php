@@ -10,7 +10,7 @@ $count = $_GET['x'];
               die('Could not connect: ' . mysql_error());
             }
 
-	 $stmt = "SELECT * FROM cart WHERE user = \"nesreeen\"";
+	 $stmt = "SELECT * FROM cart WHERE user = \"".SESSION['user']."\"";
     $result =mysqli_query($conn, $stmt);
     if($result === FALSE) { 
        die("not working"); // TODO: better error handling
@@ -36,6 +36,6 @@ $count = $_GET['x'];
       $stmt = $conn->prepare("DELETE FROM cart WHERE user = ? ");
     $stmt->bind_param("s",$name);
     // set parameters and execute
-    $name = "nesreeen";
+    $name = SESSION['user'];
        $stmt->execute();
 ?>
