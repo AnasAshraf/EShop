@@ -3,6 +3,7 @@
 
 <?php include 'regModal.php';?>
 
+
 <div class="container" style="margin-left:32.5%">
 	<div class="row">
 		<div class="col-lg-5 col-sm-5">
