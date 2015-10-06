@@ -72,13 +72,16 @@ if(! $conn )
                   echo '<div class="thumbnail" >';
                     echo '<div class="caption">';
                     echo '<p> <small>'.$row[0].'</small> </p>';
-                    echo '<p> <small>'.$row[1].' available </small> </p>';
                     echo '<p> <small>'.$row[2].' EGP </small></p>';
-                    if($row[1] > 0){
-                      echo "<p><button class=\"label label-danger\"  onclick= 'addToCart(\"".$row[0]."\")' >Add to Cart</button>";
-                    } else {
+                      if($row[1] > 0){
+                    echo '<p> <small>'.$row[1].' available </small> </p>';
+                    }
+                    else {
                       echo '<p> <small> Sold Out </small></p>';
                     }
+                    if($row[1] > 0){
+                      echo "<p><button class=\"label label-danger\"  onclick= 'addToCart(\"".$row[0]."\")' >Add to Cart</button>";
+                    } 
                     echo '</div>';
                     echo '<img src="imgs/'.$row[3].'">';
                 echo '</div>';
